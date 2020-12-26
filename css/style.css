@@ -101,11 +101,23 @@ img {
   align-items: center;
 }
 
-.address-nav .item:not(:last-child) {
-  margin-right: 50px;
+.address-nav .item {
+  display: flex;
+  align-items: center;
 }
 
-.address-emailtel {
+.emailtel-icon {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+
+  max-width: 16px;
+}
+
+.address-nav .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav-emailtel {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -118,27 +130,8 @@ img {
   padding-bottom: 31px;
 }
 
-.address-emailtel:hover::before,
-.address-emailtel:focus::before {
+.emailtel-icon:hover {
   fill: var(--accents);
-  outline: solid 2px tomato;
-}
-
-.address-emailtel.email::before {
-  content: "";
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background: url("../images/envelope.svg");
-}
-
-.address-emailtel.tel::before {
-  display: flex;
-  content: "";
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background: url("../images/smartphone.svg");
 }
 
 /*======== END ADDRESS ========*/
@@ -245,14 +238,10 @@ img {
   height: 70px;
 }
 
-/* .features-card-set .item::before {
-  content: "";
-  display: block;
-  background-image: url("../images/sprite.svg#smartphone");
-  width: 70px;
-  height: 70px;
-  margin-bottom: 30px;
-} */
+.features-card-set .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /*======== END FEATURES ========*/
 
 /*======== ABOUT ========*/
@@ -379,7 +368,7 @@ img {
 .clients-link {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
   width: 170px;
   height: 90px;
 
@@ -526,7 +515,7 @@ img {
 }
 
 .portfolio-button-set > .item .link:hover,
-.portfolio-button-set > .item .link:hover {
+.portfolio-button-set > .item .link:focus {
   color: #ffffff;
   background-color: var(--accents);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
