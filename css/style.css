@@ -14,6 +14,7 @@ body {
 
 /*CONTAINER*/
 .container {
+  box-sizing: border-box;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -55,6 +56,7 @@ img {
 }
 
 /*======== NAVIGATION ========*/
+
 .header-logo {
   font-family: Raleway;
   font-weight: 700;
@@ -109,8 +111,8 @@ img {
 .emailtel-icon {
   fill: var(--primary-text-color);
   margin-right: 10px;
-
-  max-width: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .address-nav .item:not(:last-child) {
@@ -130,7 +132,7 @@ img {
   padding-bottom: 31px;
 }
 
-.emailtel-icon:hover {
+.nav-emailtel:hover .emailtel-icon {
   fill: var(--accents);
 }
 
@@ -498,7 +500,7 @@ img {
   justify-content: center;
 }
 
-.portfolio-button-set > .item > .link {
+.button {
   padding: 6px 22px;
   min-width: 38px;
 
@@ -510,12 +512,15 @@ img {
   background: #f5f4fa;
   text-align: center;
 
+  border: none;
   border-radius: 4px;
-  margin-right: 8px;
 }
 
-.portfolio-button-set > .item .link:hover,
-.portfolio-button-set > .item .link:focus {
+.portfolio-button-set .item:not(:last-child) {
+  margin-right: 8px;
+}
+.button:hover,
+.button:focus {
   color: #ffffff;
   background-color: var(--accents);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -524,21 +529,31 @@ img {
 /*======== END PORTFOLIO BUTTONS ========*/
 
 /*======== PORTFOLIO CARDS ========*/
+
 .portfolio-card-set {
   display: flex;
   flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--portfolio-cards-gap));
 }
 
-.portfolio-card-set > .item {
-  flex-basis: calc(100% / 3 - var(--portfolio-cards-gap));
-  margin-left: var(--portfolio-cards-gap);
-  margin-top: var(--portfolio-cards-gap);
-
+.portfolio-card-set .item {
   outline: 1px solid #eeeeee;
 }
 
-.portfolio-card-set .item:hover .portfolio-card,
-.portfolio-card-set .item:focus .portfolio-card {
+.portfolio-card-set .item:not(:nth-child(3n + 1)) {
+  margin-left: var(--portfolio-cards-gap);
+}
+
+.portfolio-card-set .item {
+  margin-top: var(--portfolio-cards-gap);
+}
+
+.portfolio-card:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.portfolio-card-set .item:hover {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 

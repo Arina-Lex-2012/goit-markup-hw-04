@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <title>WebStudio</title>
@@ -13,7 +12,7 @@
     </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="container">
             <nav class="main-nav">
                 <a class="header-logo" href="./index.html" aria-label="логотип сайта">
@@ -33,16 +32,20 @@
 
                 <ul class="address-nav list">
                     <li class="item">
-                        <svg class="emailtel-icon">
-                            <use href="./images/sprite.svg#envelope"></use>
-                        </svg>
-                        <a class="nav-emailtel" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        <a class="nav-emailtel" href="mailto:info@devstudio.com">
+                            <svg class="emailtel-icon">
+                                <use href="./images/sprite.svg#envelope"></use>
+                            </svg>
+                            <span>info@devstudio.com </span>
+                        </a>
                     </li>
                     <li class="item">
-                        <svg class="emailtel-icon">
-                            <use href="./images/sprite.svg#smartphone"></use>
-                        </svg>
-                        <a class="nav-emailtel" href="tel:+380991111111">+38 096 111 11 11</a>
+                        <a class="nav-emailtel" href="tel:+380991111111">
+                            <svg class="emailtel-icon">
+                                <use href="./images/sprite.svg#smartphone"></use>
+                            </svg>
+                            <span>+38 096 111 11 11</span>
+                        </a>    
                     </li>
                 </ul>
             </nav>
