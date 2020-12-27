@@ -132,7 +132,8 @@ img {
   padding-bottom: 31px;
 }
 
-.nav-emailtel:hover .emailtel-icon {
+.nav-emailtel:hover .emailtel-icon,
+.nav-emailtel:focus .emailtel-icon {
   fill: var(--accents);
 }
 
